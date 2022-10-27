@@ -9,13 +9,19 @@ const fs = require('fs');
 const path = require('path');
 
 
-const client = new Client({
+const  client = new Client({
     intents: [
-        GatewayIntentBits.GUILD, 
-        GatewayIntentBits.GUILD_MESSAGES, 
-        GatewayIntentBits.GUILD_VOICE_STATES
-    ]
-});
+      GatewayIntentBits.GuildMessages,
+      GatewayIntentBits.Guilds,
+      GatewayIntentBits.MessageContent,
+      GatewayIntentBits.GuildVoiceStates,
+      GatewayIntentBits.GuildPresences,
+      GatewayIntentBits.GuildMembers,
+      GatewayIntentBits.GuildScheduledEvents,
+      GatewayIntentBits.GuildMessageReactions,
+      GatewayIntentBits.GuildVoiceStates,
+    ],
+  });
 
 // List of all commands
 const commands = [];
